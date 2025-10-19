@@ -10,14 +10,12 @@ const SidebarComponent: React.FC<SliderProps> = ({
   children,
   hideCloseIcon,
 }) => {
-  // Disable scroll when sidebar is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
   return (
     <>
-      {/* Dimmed Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300 ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
@@ -25,7 +23,6 @@ const SidebarComponent: React.FC<SliderProps> = ({
         onClick={onClose}
       ></div>
 
-      {/* Sidebar Drawer (Right Side) */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out 
         ${open ? "translate-x-0" : "translate-x-full"}`}
@@ -34,7 +31,6 @@ const SidebarComponent: React.FC<SliderProps> = ({
           maxWidth: width,
         }}
       >
-        {/* Close Button */}
         {!hideCloseIcon && (
           <button
             onClick={onClose}
