@@ -22,8 +22,8 @@ export const FooterComponent = ({
         {SAVE_THE_SEGMENT}
       </Button>
       <Button
-        bg="bg-white text-[#da658d]"
-        className="rounded-md px-4 py-2 font-semibold hover:bg-white/80 hover:text-[#da658d]/80 transition-all ease-in-out duration-300 "
+        bg="bg-white"
+        className="rounded-md px-4 py-2 !text-[#da658d] font-semibold hover:bg-white/80 hover:text-[#da658d]/80 transition-all ease-in-out duration-300 "
         onClick={onCancel}
         disabled={loading}
       >

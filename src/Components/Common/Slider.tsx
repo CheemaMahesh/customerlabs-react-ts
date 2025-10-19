@@ -24,12 +24,8 @@ const SidebarComponent: React.FC<SliderProps> = ({
       ></div>
 
       <div
-        className={`fixed top-0 right-0 h-full bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out 
+        className={`fixed top-0 right-0 h-full bg-white shadow-2xl z-50 transform transition-transform duration-500 ease-in-out w-[30%] max-sm:w-[90%] 
         ${open ? "translate-x-0" : "translate-x-full"}`}
-        style={{
-          width: "100%",
-          maxWidth: width,
-        }}
       >
         {!hideCloseIcon && (
           <button
